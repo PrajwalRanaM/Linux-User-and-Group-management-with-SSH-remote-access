@@ -4,9 +4,9 @@
 
 This lab demonstrates basic Linux user and group administration using a Kali Linux virtual machine.
 
-The original exercise involved creating a Linux group, creating a user account within that group, setting the user's password, examining Linux account and authentication files, and switching to the newly created account.
+It involved creating a Linux group, creating a user account within that group, setting the user's password, examining Linux account and authentication files, and switching to the newly created account.
 
-As an additional practical step, I configured **PuTTY** to remotely access the Kali Linux virtual machine over SSH. This extended the lab from local terminal administration to remote Linux administration.
+I configured **PuTTY** to remotely access the Kali Linux virtual machine over SSH. This extended the lab from local terminal administration to remote Linux administration.
 
 ## Objectives
 
@@ -65,10 +65,6 @@ A password was assigned to the new account:
 sudo passwd ufour
 ```
 
-For this practice lab, the password specified by the exercise was used.
-
-> **Security note:** Real production systems should follow an organisation's password policy and should never use simple lab passwords.
-
 ## Part 4 — Verify the User Account
 
 The `/etc/passwd` file was checked:
@@ -107,23 +103,9 @@ The active account was then verified:
 whoami
 ```
 
-The expected result was:
-
-```text
-ufour
-```
-
-The session was then exited using:
-
-```bash
-exit
-```
-
 ## Part 7 — Remote Access Using PuTTY
 
-### Why PuTTY was added
-
-The original exercise was performed through the Kali VM's terminal. To make the lab more representative of real-world Linux administration, I additionally configured **PuTTY** on the host machine to remotely connect to the Kali VM using SSH.
+The most of the operation was performed through the Kali VM's terminal. To make the lab more representative of real-world Linux administration, I additionally configured **PuTTY** on the host machine to remotely connect to the Kali VM using SSH.
 
 This demonstrated how an administrator can manage a Linux system without directly interacting with the VM's graphical console.
 
@@ -174,20 +156,6 @@ Key concepts demonstrated:
 
 The additional PuTTY component helped connect the basic Linux account-management exercise to a real-world administration scenario where a Linux server may be managed remotely rather than through its local console.
 
-## Evidence
-
-Screenshots included in this repository demonstrate:
-
-- Linux group creation
-- User creation
-- User/group verification
-- `/etc/passwd` verification
-- `/etc/shadow` verification
-- Switching to the `ufour` account
-- `whoami` verification
-- PuTTY configuration
-- Successful SSH connection to the Kali VM
-- Remote command execution
 
 ## Security Considerations
 
